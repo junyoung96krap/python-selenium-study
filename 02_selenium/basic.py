@@ -3,3 +3,4 @@
 # 확인 : pip show selenium
 
 from selenium import webdriver
+driver = webdriver.Chrome()
