@@ -8,8 +8,11 @@
 # 설치 : pip install selenium
 # Selenium version 확인 : pip show selenium
 
+import time
 from selenium import webdriver
+
 driver = webdriver.Chrome()
+time.sleep(5)
 
 # 웹 드라이버
 # 셀레니움으로 브라우저를 자동화 할 때 사용하는 드라이버.
