@@ -32,8 +32,22 @@ time.sleep(10)
 # 키보드 제어
 pyautogui.typewrite('toy story', interval=0.1)
 pyautogui.press('enter')
+driver.implicitly_wait(10)
 
 pyautogui.keyDown('ctrl')
 pyautogui.press('a')
 pyautogui.keyUp('ctrl')
 time.sleep(5)
+
+# 이미지 촬영
+# 테스트 fail 시 현재 상태를 촬영하기.
+# 현재 서비스의 ui 상태를 파악하기 위해 주기적인 스크린샷 수집.
+# 수집 후 비교를 위한 스크린샷 촬영.
+
+pyautogui.screenshot('./myscreenshot.png', region=(445, 526, 274, 130))
+time.sleep(5)
+
+# 이미지 인식 (실패 시 None 반환)
+print(pyautogui.locateOnScreen('./myscreenshot.png'))
+time.sleep(5)
+
