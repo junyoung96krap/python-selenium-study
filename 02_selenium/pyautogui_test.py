@@ -17,15 +17,23 @@ print(mouse_position[1]) # y좌표
 # 튜플 형태로 반환해 주기 때문에 인덱스로 각 요소에 접근이 가능하다.
 # 튜플 : 리스트와 비슷하지만 요소를 수정 할 수는 없음.
 
-pyautogui.moveTo(0, 0) # 마우스 제어
+# 마우스 제어
+pyautogui.moveTo(0, 0) 
 
 driver.maximize_window()
-driver.get('https://cgv.co.kr/')
-time.sleep(10)
+driver.get('https://naver.com/')
 driver.implicitly_wait(10)
+pyautogui.click(1300, 300)
 
-
-pyautogui.click(941, 1460)
 pyautogui.click(button='right')
 pyautogui.doubleClick()
 time.sleep(10)
+
+# 키보드 제어
+pyautogui.typewrite('toy story', interval=0.1)
+pyautogui.press('enter')
+
+pyautogui.keyDown('ctrl')
+pyautogui.press('a')
+pyautogui.keyUp('ctrl')
+time.sleep(5)
